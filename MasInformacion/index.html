@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../build/bootstrap.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <link href="../build/styles.css" rel="stylesheet">
+    
+    <title>Citi</title>
+</head>
+
+<body class="z-10 bg-gray-900">
+  <!-- Modal Start************************************************************************************************-->
+  <header id="nav" data-aos="fade-down"
+  data-aos-duration="2000"   class="flex items-center justify-center w-full h-24 my-16 nav lg:h-36">
+   <span  class="flex justify-center w-4/5">
+     <span  id="logo" class="w-1/2 text-3xl text-white lg:block">
+       Beyond
+     </span>
+     <span id='btnDiv' class="flex justify-end w-1/3 space-x-8 text-xl text-white lg:w-1/2">
+     
+       <span id="navOptions" class="hidden justify-centerfy-center items lg:flex">
+         <a href="/mxm/Citi/" class="my-auto text-sm text-white transform cursor-pointer lg:text-xl hover:opacity-100 opacity-70 btn hover:scale-110">
+           Experiencias
+         </a>
+         <!--Modal Trigger--> 
+         
+         <a class="my-auto text-sm text-white transform cursor-pointer lg:text-xl hover:opacity-100 opacity-70 btn hover:scale-110" href="#open-modal-two">
+           Contacto
+         </a>   
+         <a class="my-auto text-sm text-white transform cursor-pointer lg:text-xl hover:opacity-100 opacity-70 btn hover:scale-110">
+           Mi Perfil
+         </a>
+       </span>
+     </span>
+   </span>
+   <!--Boton Movil***************************************************************************************************-->
+   
+   <span  class="items-center justify-centerfy-center lg:flex">
+     <svg id="menuButton" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+     </svg>
+   </span>
+ </header>
+ 
+
+ <img id="ayudaBtn" class="fixed right-0 flex transform cursor-pointer top-72 hover:scale-105 opacity-80 hover:opacity-100 ayudaBtn" src="../assets/img/Ayuda.png" alt="">
+ 
+ <div id="ayuda" class="fixed right-0 hidden w-full bg-white md:w-80 top-32 rounded-2xl lg:top-80 ayuda">
+  <div class="flex justify-center w-full h-16 pt-2 text-2xl text-white bg-gray-500 border border-gray-600 rounded-2xl">
+    
+    <span class="relative flex justify-end w-full mt-2">
+      <p class="absolute w-full text-center">Ayudar</p>
+      <svg id="cerrar" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mr-8 transform cursor-pointer hover:scale-105 opacity-80 hover:opacity-100" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>  
+    </span>
+  </div>
+  <div class="overflow-y-scroll imessage">
+    <p class="from-them">Hola, me gustaría 
+      saber que fechas 
+      hay disponibles</p>
+    <p class="from-me">Hola, con mucho gusto voy a buscar las fechas disponibles. Permítame unos momentos en lo que reviso las fechas por favor.</p>
+    <p class="mb-16 from-them">👍🏻 Vale, gracias</p>
+  </div>
+
+  <div class="absolute bottom-0 flex w-full text-4xl text-white bg-gray-300 border-t-2 h-14">
+    <div class="w-full transform scale-75 bg-white form-floating rounded-2xl">
+      <input type="text" class="text-black bg-transparent shadow-none form-control" id="floatingInput" placeholder="name@example.com">
+      <label class="text-sm text-gray-600 lg:text-lg" for="floatingInput">Escribe Aquí</label>
+    </div>
+    <span class="flex pt-3 pr-2 space-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 cursor-pointer opacity-80 hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 cursor-pointer opacity-80 hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transform rotate-45 cursor-pointer opacity-80 hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+      </svg>  
+    </span>
+  </div>
+</div>
+
+<div id="open-modal" class="modal-window">
+
+       <div class="flex flex-col w-full mx-auto lg:w-2/3 xl:w-1/2 md:w-4/5 lg:flex-row">
+         <div class="w-full mx-auto bg-black lg:w-1/2 h-modal">
+           <p class="w-full py-8 text-lg text-center text-white lg:text-2xl lg:py-16">Información personal</p>
+           <p class="w-full px-8 text-sm text-center text-white lg:text-lg ">
+             Ingrese sus datos personales para registrarse y la dirección a la que sera 
+             enviado su kit de materiales para realizar la actividad seleccionada.
+           </p>
+           <p class="flex flex-col px-4 text-lg text-center text-white lg:w-1/2 lg:absolute lg:bottom-20">
+             <span>
+               5555-555-555
+             </span>
+             <span>
+               info@ejemplo.com
+             </span>
+           </p>
+         </div>
+         <div class="relative w-full mx-auto overflow-y-scroll bg-gray-400 bg-opacity-25 lg:w-1/2 h-modalTwo filter backdrop-blur-3xl backdrop-filter">
+           <!--Modal Form Start***************************************************************************************************-->
+           <div class="flex justify-end w-full">
+             <a href="#" title="Close" class="mr-4 modal-close hover:text-white">Cerrar</a>
+           </div>
+           <form action="">
+             <span class="flex justify-center w-full">
+               
+           <!--Scroll SVG***************************************************************************************************-->
+               <svg class="lg:hidden" width="20px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                 <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;" />
+                 <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;" />
+               </svg>
+             </span>
+           <!--Header Items***************************************************************************************************-->
+             <div class="form-floating">
+               <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+               <label class="text-sm text-white lg:text-md" for="floatingInput">Nombre Completo</label>
+             </div>
+             <div class="form-floating ">
+               <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+               <label class="text-sm text-white lg:text-md" for="floatingInput">Correo electrónico</label>
+             </div>
+             <div class="form-floating">
+               <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+               <label class="text-sm text-white lg:text-md" for="floatingInput">Teléfono</label>
+             </div>
+             <div class="form-floating">
+               <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+               <label class="text-sm text-white lg:text-md" for="floatingInput">Calle con número</label>
+             </div>
+             <div class="form-floating">
+               <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+               <label class="text-sm text-white lg:text-md" for="floatingInput">Entre calles</label>
+             </div>
+             <span class="flex w-full">
+               <div class="pr-1 form-floating">
+                 <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+                 <label class="text-sm text-white lg:text-md" for="floatingInput">Colonia</label>
+               </div>
+               <div class="pl-1 form-floating">
+                 <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+                 <label class="text-sm text-white lg:text-md" for="floatingInput">Cuidad</label>
+               </div>
+             </span>
+             <span class="flex w-full">
+               <div class="pr-1 form-floating">
+                 <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+                 <label class="text-sm text-white lg:text-md" for="floatingInput">Delegación</label>
+               </div>
+               <div class="pl-1 form-floating">
+                 <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+                 <label class="text-sm text-white lg:text-md" for="floatingInput">Código Postal</label>
+               </div>
+             </span>
+           </form>
+           <!--Modal Form End***************************************************************************************************-->
+ 
+           <!--CheckBox-->
+           <form class="space-y-8" action="">
+
+             <span class="flex w-full text-white align-center">
+              <input  class="mt-1 transform scale-75 lg:ml-8 checkbox-round" type="checkbox" id="scales" name="scales">
+               <p class="pr-1 ml-4 text-sm tracking-wide border-b cursor-pointer lg:text-md">Acepto aviso de privacidad</p>
+             </span>
+   
+             <span class="flex w-full text-white align-center">
+              <input  class="mt-2 transform scale-75 lg:ml-8 checkbox-round" type="checkbox" id="scales" name="scales">
+
+  
+               <p class="ml-4 text-sm tracking-tight border-b cursor-pointer lg:text-md">Acepto términos y condiciones</p>
+             </span>
+
+           </form>
+           <span class="flex justify-center w-full ">
+            <button class="h-10 text-white bg-gradient-to-b from-gray-400 to-gray-800 filter backdrop-blur-3xl backdrop-filter bg-opacity-40 w-36">
+                Siguiente
+            </button>
+          </span>
+         </div>
+       </div>
+     </div>
+ <!-- Modal End*************************************************************************************************************-->
+ 
+ <!--Contact Modal ************************************************************************************-->
+ <div  id="open-modal-two" class="modal-window">  
+   <!--Form Start***************************************************************************************************-->
+     <form class="flex flex-col w-full px-8 mx-auto space-y-4 transform scale-75 rounded-xl lg:w-4/5 lg:px-16 modalBg">
+       <div class="flex justify-end w-full">
+         <a href="#" title="Close" class="mr-4 modal-close hover:text-white">Cerrar</a>
+       </div>
+       <p class="flex justify-center py-16 text-2xl text-white lg:text-4xl">REGISTRA TUS DATOS EN EL SIGUENTE FORMULARIO</p>
+       
+ 
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Nombre Completo:</label>
+         </div>
+         
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Correo electrónico:</label>
+         </div>
+         
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Teléfono:</label>
+         </div>
+ 
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Experiencia:</label>
+         </div>
+     
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Fecha deseada:</label>
+         </div>
+ 
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Últimos 5 dígitos de folio:</label>
+         </div>
+ 
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Clave</label>
+         </div>
+ 
+         <!--CheckBox-->
+         <span class="flex w-full h-8 text-white align-center">
+           <input placeholder="Acepto términos y condiciones:" class="mt-1 ml-8 checkbox-round" type="checkbox" id="scales" name="scales"> 
+           <p class="ml-4 lg:text-xl">Acepto términos y condiciones</p>
+         </span>
+         <span class="flex justify-center w-full">
+           <button class="w-48 h-16 mb-16 text-2xl text-white transform opacity-70 hover:opacity-100 hover:scale-105 lg:w-96 lg:text-5xl bg-gradient-to-b from-gray-500 via-black to-gray-900 rounded-xl">
+             Enviar
+           </button>
+         </span>
+       </form>
+     
+     <!--Form End***************************************************************************************************-->
+ 
+ </div>
+ <!--Contact Modal End**********************************************************************************-->
+
+    <!--Hero Start***************************************************************************************************-->
+    
+
+ 
+ 
+
+
+
+ <!-- Modal End*************************************************************************************************************-->
+ 
+ <!--Contact Modal ************************************************************************************-->
+
+ <!--Contact Modal End**********************************************************************************-->
+
+    <!--Hero Start***************************************************************************************************-->
+
+
+    <!--Hero End***************************************************************************************************-->
+    <!--Como reservar Start***************************************************************************************************-->
+    
+    <div id="banner" class="w-4/5 mx-auto">
+      <div  class="relative mx-auto mb-16 overflow-hidden bg-black flip h-lg">
+          <img  class="absolute object-cover w-full h-56 sm:h-72 md:h-96 lg:w-full lg:h-full clippy flip" src="../assets/img/RecursoUno.jpg" alt="">
+          <div class="relative flex justify-end object-cover w-full h-56 bg-transparent sm:h-72 md:h-96 lg:w-full lg:h-full flip">
+            <div class="hidden w-1/2 text-center text-white h-96 lg:block">
+                <p data-aos="fade-down"
+                data-aos-duration="2000"  class="mt-48 text-3xl font-bold">
+                  Cata de Cacao
+                </p>
+                <p data-aos="fade-left"
+                data-aos-duration="2000"  class="text-2xl ">
+                  Con un toque de Mezcal
+                </p>
+            </div>
+            <div class="w-full h-16 mt-4 text-center text-white bg-black bg-opacity-10 lg:hidden">
+              <p class="text-3xl font-bold ">
+                Cata de Cacao
+              </p>
+              <p class="text-2xl">
+                Con un toque de Mezcal
+              </p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+
+    
+    <section class="flex w-full lg:min-h-screen">
+      <div  class="flex flex-col w-4/5 mx-auto my-auto lg:flex-row ">
+        <span class="w-full mx-auto lg:w-3/5">
+          <p data-aos="fade-right"
+          data-aos-duration="2000" class="w-full py-8 text-2xl text-white lg:text-5xl text-bold">Descripción</p>
+          <p 
+          data-aos="fade-up"
+          data-aos-duration="2000"
+          class="py-8 text-sm text-white lg:pr-32 lg:text-2xl text-bold">
+            Experiencia llevada hasta tu casa gracias a una empresa Mexicana que trabaja de la mano con familias y productores cacaoteros Mexicanos, bajo sistemas agroforestales rodeadas de 60 diferentes especies de árboles, frutas y flores, lo que le brinda al chocolate sabores extraordinarios. El resultado, barras compuestas únicamente de cacao y azúcar. Durante la cata podrás probar y degustar desde la semilla hasta la bebida, pasando por sus premiadas barras en diversos talleres y eventos alrededor del mundo.
+          </p>
+        </span>
+        <span class="flex justify-center lg:w-2/5">
+          <div class="flex flex-col items-center w-4/5 h-auto my-8 text-center text-white">
+            <div 
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            class="flex py-2 border border-white ">
+              <span class="flex items-center px-2 cursor-pointer lg:space-x-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <p class="text-sm lg:text-lg">50 Participantes</p>
+              </span>
+              <span class="flex items-center px-2 cursor-pointer lg:space-x-2 ">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                </svg>
+                <p class="text-sm lg:text-lg">Versión en Vivo</p>
+              </span>
+            </div>
+            <div
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            >
+              <p class="w-full mt-8 text-lg text-white lg:text-4xl text-bold">Fechas disponibles:</p>
+            <p class="w-full mt-2 text-lg text-white lg:text-4xl text-bold">
+              13, 14, y 15
+              <br>
+              de Octubre 2021
+            </p>
+                <select class="w-full mt-8 space-y-2 text-sm bg-transparent border border-white lg:text-2xl rounded-xl" class="text-black" id="fecha" >
+                  <option class="w-full text-center text-white bg-black cursor-pointer opacity-80 hover:opacity-100"  value="">Seleccionar fecha</option>
+                  <option class="w-full text-center text-white bg-black cursor-pointer opacity-80 hover:opacity-100"  value="">13 Octubre 2021 4:00pm-5:00pm</option>
+                  <option class="w-full text-center text-white bg-black cursor-pointer opacity-80 hover:opacity-100"  value="">14 Octubre 2021 4:00pm-5:00pm</option>
+                  <option class="w-full text-center text-white bg-black cursor-pointer opacity-80 hover:opacity-100"  value="">15 Octubre 2021 4:00pm-5:00pm</option>
+                </select>
+              <span class="flex justify-center w-full py-8 space-x-8 text-sm lg:space-x-16 lg:text-lg lg:py-12 ">
+                <a href="#open-modal">
+                  <button  class="h-10 px-2 text-2xl text-white transform rounded-lg text-bold w-44 hover:scale-105 opacity-80 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-900">
+                    Agendar
+                  </button>  
+                </a>
+              </span>
+              <p class="w-full text-lg text-white lg:text-2xl text-bold">Fecha límite de reservación:</p>
+              <p class="w-full mt-8 text-lg text-center text-white lg:text-xl text-bold">7 de Octubre 2021</p>
+            </div>
+          </div>
+        </span>
+      </div> 
+
+    </section>
+
+
+    
+    <section class="w-full min-h-screen ">
+      <div  class="flex flex-col w-4/5 mx-auto lg:flex-row">
+        <span class="w-full mx-auto lg:w-3/5">
+          
+          <p 
+          data-aos="fade-right"
+          data-aos-duration="2000" 
+Ponen          class="w-full pb-8 text-2xl text-white lg:py-8 lg:text-5xl text-bold">Chocolate</p>
+          <p 
+          data-aos="fade-right"
+          data-aos-duration="2000" 
+          class="w-full text-lg font-bold text-white lg:text-3xl text-bold ">Chocolateria La Rifa:</p>
+
+          
+          <p 
+          data-aos="fade-up"
+          data-aos-duration="2000" 
+          class="py-4 text-sm text-white lg:pr-32 lg:text-xl text-bold">En 2017 y 2018 sus barras fueron premiadas en los Internacional
+            Chocolate Awards dentro de la edición América, en la categoría de barras
+            hechas desde la semilla con azúcar alternativa y chocolate de origen sin sabor.
+          <br>
+          <br>
+            En 2017, NOMA Tulum incorpora en su menú el chocolate elaborado con cacao "Blanco de la Rifa".
+            Posteriormente y hasta la fecha NOMA 2.0 en Copenhague, Dinamarca. En 2018 y 2019, La Rifa realiza un Tasting 
+            Tour por distintas ciudades  de E.U.A. (Washington, NYC, Chicago, entre otras) donde se impartieron charlas y desgustaciones
+            de diferentes chocolates elaborados por La Rifa con distintos cacaos de México. 
+          <br> 
+          <br>
+            La Cata sera guiada por Daniel Reza, autor y creador de La Rifa y Certificado como catador de chocolate nivel 1 por el 
+            International Institute of Chocolate and Cacao Tasting en Noviembre de 2019. Quien ademas ha sido invitado a The Chocolate 
+            Conservatory en la Universidad de Harvard y New England Chocolate Festival.
+          </p>
+        </span>
+
+        <span class="w-full lg:w-2/5">
+          <img 
+          data-aos="fade-up"
+          data-aos-duration="2000" 
+          class="object-cover w-full h-full" src="../assets/img/Cacao.jpg" alt="">
+          </span>
+      </div>
+    </section>
+
+
+
+
+    <section class="w-full min-h-full">
+      <div  class="flex flex-col w-4/5 mx-auto lg:flex-row">
+        <span class="w-full mx-auto lg:w-3/5">
+        <img data-aos="fade-up"
+        data-aos-duration="2000"  src="../assets/img/Kit.png" alt="">
+        </span>
+        <span 
+        class="w-full lg:pl-32 lg:w-2/5 ">
+          <p 
+          data-aos="fade-up-right"
+          data-aos-duration="2000" 
+          class="w-full py-8 text-2xl text-white lg:mt-32 lg:text-4xl text-bold">¿Qué incluye el kit?</p>
+          <p 
+          data-aos="fade-up"
+          data-aos-duration="2000" 
+          class="py-8 text-sm text-white lg:text-2xl text-bold">
+            3 Barras variadas de chocolate oscuro<br>
+            (70% Cacoa) 35 grs. c/uno.
+            <br>
+            <br>
+            Mezcal Terruño de 250ml.
+            <br>
+            <br>
+            Semillas del cacao tostado
+            <br>
+            <br>
+            Morral cacaotero
+            <br>
+            <br>
+            Infografia de chocolateria mexicana
+            <br>
+            ganadora de concursos internacionales.
+            <br>
+            Sus chocolates se utilizan en menus de
+            <br> 
+            restaurantes internacionales.
+            <br> 
+            <br>
+            Caja de MDF acabado natural
+          </p>
+        </span>
+      </div>
+    </section>
+
+
+    <section class="w-full h-full min-h-screen">
+    <p class="w-4/5 mx-auto mt-16 text-center text-white border-b border-red-800 lg:mt-24"></p>
+    
+      <p class="w-4/5 mx-auto mt-8 text-2xl text-white lg:mb-0 lg:text-5xl text-bold">Más experiencias</p>
+
+    <ul class="flex flex-col pb-16 mt-32 text-white lg:px-32 lg:flex-row">
+      
+      <li  class="w-full text-center lg:w-1/3">
+        <div class="flex justify-center w-4/5 mx-auto h-72 rounded-xl md:w-3/5 lg:w-4/5 xl:w-3/5">
+          <img  
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            class="object-cover w-full h-full rounded-xl" src="../assets/img/RecursoMeditate.jpg" alt="">
+        </div>
+        <p class="mt-4 text-3xl font-bold">Cata de Caco</p>
+        <p class="my-2 text-lg text-bold">Con un toque de Mezcal</p>
+        <button class="h-12 pb-2 mx-auto my-4 text-2xl text-white transform rounded-lg w-52 hover:scale-105 opacity-80 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-900">
+          Mas Informacion
+        </button>
+      </li>
+
+      <li  class="w-full text-center lg:w-1/3">
+        <div class="flex justify-center w-4/5 mx-auto h-72 rounded-xl md:w-3/5 lg:w-4/5 xl:w-3/5">
+          <img  
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            class="object-cover w-full h-full rounded-xl" src="../assets/img/RecursoYoga.jpg" alt="">
+        </div>
+        <p class="mt-4 text-3xl font-bold">Cata de Caco</p>
+        <p class="my-2 text-lg text-bold">Con un toque de Mezcal</p>
+        <button class="h-12 pb-2 mx-auto my-4 text-2xl text-white transform rounded-lg w-52 hover:scale-105 opacity-80 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-900">
+          Mas Informacion
+        </button>
+      </li>
+
+      <li  class="w-full text-center lg:w-1/3">
+        <div class="flex justify-center w-4/5 mx-auto h-72 rounded-xl md:w-3/5 lg:w-4/5 xl:w-3/5">
+          <img  
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            class="object-cover w-full h-full rounded-xl" src="../assets/img/RecursoCuatro.jpg" alt="">
+        </div>
+        <p class="mt-4 text-3xl font-bold">Cata de Caco</p>
+        <p class="my-2 text-lg text-bold">Con un toque de Mezcal</p>
+        <button class="h-12 pb-2 mx-auto my-4 text-2xl text-white transform rounded-lg w-52 hover:scale-105 opacity-80 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-900">
+          Mas Informacion
+        </button>
+      </li>
+
+      
+
+ 
+
+
+      
+      
+    
+    </section>
+      
+    </ul>
+
+    <p data-aos="fade-down"
+    data-aos-duration="2000"  class="w-4/5 pb-8 mx-auto mt-8 text-center text-white border-b border-red-800 lg:mt-0">
+      <span class="text-2xl lg:text-3xl text-bold ">CONTACTO</span>
+      <br>
+      <br>
+      <span class=" lg:text-2xl text-md">
+        Telefono: (55) XX XX XX XX
+        <br>
+        Horario de atención: 9am a 9pm
+        <br>
+        Correo: XXXX@experimenta.com.mx
+      </span>
+    </p>
+
+    <footer  class="flex justify-center w-full py-8 text-sm text-white lg:space-x-16 lg:text-xl">
+      <a  class="w-1/2 my-auto text-center text-white cursor-pointer lg:text-xl hover:opacity-100 opacity-70" href="">
+        Términos y condiciones
+      </a>
+      <a class="w-1/2 my-auto text-center text-white cursor-pointer lg:text-xl hover:opacity-100 opacity-70" href="">
+        Aviso de privacidad
+      </a>
+    </footer>
+
+    <script>
+      const header = document.getElementById("nav");
+      const banner = document.getElementById("banner");
+      
+      window.addEventListener('scroll', function() { 
+        setTimeout(function(){ header.classList.remove('my-16') }, 50);
+        setTimeout(function(){ banner.classList.add('pt-48') }, 50);
+        setTimeout(function(){ header.classList.add('stick') }, 50);
+        setTimeout(function(){ header.classList.add('modalBg') }, 100);
+
+    });
+    
+
+      const menuButton = document.getElementById("menuButton");
+      const logo = document.getElementById("logo");
+      const navOptions = document.getElementById("navOptions");
+      const btnDiv = document.getElementById("btnDiv");
+      
+      menuButton.addEventListener('click', function() { 
+      navOptions.classList.toggle("hidden")
+      logo.classList.toggle("hidden")
+      btnDiv.classList.toggle("w-1/3")
+      
+      
+    });
+
+      const ayuda = document.getElementById("ayuda");
+      const ayudaBtn = document.getElementById("ayudaBtn");
+      const cerrar = document.getElementById("cerrar");
+      
+      cerrar.addEventListener("click", ()=>{
+        ayuda.classList.toggle('hidden');
+      })
+      ayudaBtn.addEventListener("click", ()=>{
+        ayuda.classList.toggle('hidden');
+    });
+    
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

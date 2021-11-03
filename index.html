@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./build/bootstrap.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="./build/styles.css" rel="stylesheet">
+    <title>Citi</title>
+</head>
+
+<body class="z-10 bg-gray-900">
+  <!-- Modal Start************************************************************************************************-->
+  <header id="nav" data-aos="fade-down"
+  data-aos-duration="2000"   class="flex items-center justify-center w-full h-24 my-16 nav lg:h-36">
+   <span  class="flex justify-center w-4/5">
+     <span  id="logo" class="w-1/2 text-3xl text-white lg:block">
+       Beyond
+     </span>
+     <span id='btnDiv' class="flex justify-end w-1/3 space-x-8 text-xl text-white lg:w-1/2">
+     
+       <span id="navOptions" class="hidden justify-centerfy-center items lg:flex">
+         <a href="/mxm/Citi/" class="my-auto text-sm text-white transform cursor-pointer lg:text-xl hover:opacity-100 opacity-70 btn hover:scale-110">
+           Experiencias
+         </a>
+         <!--Modal Trigger--> 
+         
+         <a class="my-auto text-sm text-white transform cursor-pointer lg:text-xl hover:opacity-100 opacity-70 btn hover:scale-110" href="#open-modal-two">
+           Contacto
+         </a>   
+         <a class="my-auto text-sm text-white transform cursor-pointer lg:text-xl hover:opacity-100 opacity-70 btn hover:scale-110">
+           Mi Perfil
+         </a>
+       </span>
+     </span>
+   </span>
+   <!--Boton Movil***************************************************************************************************-->
+   
+   <span  class="items-center justify-centerfy-center lg:flex">
+     <svg id="menuButton" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 cursor-pointer lg:hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+     </svg>
+   </span>
+ </header>
+ <img id="ayudaBtn" class="fixed right-0 flex transform cursor-pointer top-72 hover:scale-105 opacity-80 hover:opacity-100 ayudaBtn" src="./assets/img/Ayuda.png" alt="">
+ 
+ <div id="ayuda" class="fixed right-0 hidden w-full bg-white md:w-80 top-32 rounded-2xl lg:top-80 ayuda">
+  <div class="flex justify-center w-full h-16 pt-2 text-2xl text-white bg-gray-500 border border-gray-600 rounded-2xl">
+    
+    <span class="relative flex justify-end w-full mt-2">
+      <p class="absolute w-full text-center">Ayudar</p>
+      <svg id="cerrar" xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 mr-8 transform cursor-pointer hover:scale-105 opacity-80 hover:opacity-100" viewBox="0 0 20 20" fill="currentColor">
+        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+      </svg>  
+    </span>
+  </div>
+  <div class="overflow-y-scroll imessage">
+    <p class="from-them">Hola, me gustaría 
+      saber que fechas 
+      hay disponibles</p>
+    <p class="from-me">Hola, con mucho gusto voy a buscar las fechas disponibles. Permítame unos momentos en lo que reviso las fechas por favor.</p>
+    <p class="mb-16 from-them">👍🏻 Vale, gracias</p>
+  </div>
+
+  <div class="absolute bottom-0 flex w-full text-4xl text-white bg-gray-300 border-t-2 h-14">
+    <div class="w-full transform scale-75 bg-white form-floating rounded-2xl">
+      <input type="text" class="text-black bg-transparent shadow-none form-control" id="floatingInput" placeholder="name@example.com">
+      <label class="text-sm text-gray-600 lg:text-lg" for="floatingInput">Escribe Aquí</label>
+    </div>
+    <span class="flex pt-3 pr-2 space-x-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 cursor-pointer opacity-80 hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.172 7l-6.586 6.586a2 2 0 102.828 2.828l6.414-6.586a4 4 0 00-5.656-5.656l-6.415 6.585a6 6 0 108.486 8.486L20.5 13" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 cursor-pointer opacity-80 hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 transform rotate-45 cursor-pointer opacity-80 hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+      </svg>  
+    </span>
+  </div>
+</div>
+ <!-- Modal End*************************************************************************************************************-->
+ 
+ <!--Contact Modal ************************************************************************************-->
+ <div  id="open-modal-two" class="modal-window">  
+   <!--Form Start***************************************************************************************************-->
+     <form class="flex flex-col w-full px-8 mx-auto space-y-4 transform scale-75 rounded-xl lg:w-4/5 lg:px-16 modalBg">
+       <div class="flex justify-end w-full">
+         <a href="#" title="Close" class="mr-4 modal-close hover:text-white">Cerrar</a>
+       </div>
+       <p class="flex justify-center py-16 text-2xl text-white lg:text-4xl">REGISTRA TUS DATOS EN EL SIGUENTE FORMULARIO</p>
+       
+ 
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Nombre Completo:</label>
+         </div>
+         
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Correo electrónico:</label>
+         </div>
+         
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Teléfono:</label>
+         </div>
+ 
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Experiencia:</label>
+         </div>
+     
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Fecha deseada:</label>
+         </div>
+ 
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Últimos 5 dígitos de folio:</label>
+         </div>
+ 
+         <div class="mb-3 text-white bg-transparent form-floating">
+           <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+           <label class="indent"  for="floatingInput ">Clave</label>
+         </div>
+ 
+         <!--CheckBox-->
+         <span class="flex w-full h-8 text-white align-center">
+           <input placeholder="Acepto términos y condiciones:" class="mt-1 ml-8 checkbox-round" type="checkbox" id="scales" name="scales"> 
+           <p class="ml-4 lg:text-xl">Acepto términos y condiciones</p>
+         </span>
+         <span class="flex justify-center w-full">
+           <button class="w-48 h-16 mb-16 text-2xl text-white transform opacity-70 hover:opacity-100 hover:scale-105 lg:w-96 lg:text-5xl bg-gradient-to-b from-gray-500 via-black to-gray-900 rounded-xl">
+             Enviar
+           </button>
+         </span>
+       </form>
+     
+     <!--Form End***************************************************************************************************-->
+ 
+ </div>
+ <!--Contact Modal End**********************************************************************************-->
+  <div  id="open-modal-two" class="modal-window">  
+    <!--Form Start***************************************************************************************************-->
+      <form class="flex flex-col w-full px-8 mx-auto space-y-4 transform scale-75 rounded-xl lg:w-4/5 lg:px-16 modalBg">
+        <div class="flex justify-end w-full">
+          <a href="#" title="Close" class="mr-4 modal-close hover:text-white">Cerrar</a>
+        </div>
+        <p class="flex justify-center py-16 text-2xl text-white lg:text-4xl">REGISTRA TUS DATOS EN EL SIGUENTE FORMULARIO</p>
+        
+  
+          <div class="mb-3 text-white bg-transparent form-floating">
+            <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+            <label class="indent"  for="floatingInput ">Nombre Completo:</label>
+          </div>
+          
+          <div class="mb-3 text-white bg-transparent form-floating">
+            <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+            <label class="indent"  for="floatingInput ">Correo electrónico:</label>
+          </div>
+          
+          <div class="mb-3 text-white bg-transparent form-floating">
+            <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+            <label class="indent"  for="floatingInput ">Teléfono:</label>
+          </div>
+  
+          <div class="mb-3 text-white bg-transparent form-floating">
+            <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+            <label class="indent"  for="floatingInput ">Experiencia:</label>
+          </div>
+      
+          <div class="mb-3 text-white bg-transparent form-floating">
+            <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+            <label class="indent"  for="floatingInput ">Fecha deseada:</label>
+          </div>
+  
+          <div class="mb-3 text-white bg-transparent form-floating">
+            <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+            <label class="indent"  for="floatingInput ">Últimos 5 dígitos de folio:</label>
+          </div>
+  
+          <div class="mb-3 text-white bg-transparent form-floating">
+            <input type="email" class="text-white bg-transparent form-control rounded-pill indent" id="floatingInput" placeholder="name@example.com">
+            <label class="indent"  for="floatingInput ">Clave</label>
+          </div>
+  
+          <!--CheckBox-->
+          <span class="flex w-full h-8 text-white align-center">
+            <input placeholder="Acepto términos y condiciones:" class="mt-1 ml-8 checkbox-round" type="checkbox" id="scales" name="scales"> 
+            <p class="ml-4 lg:text-xl">Acepto términos y condiciones</p>
+          </span>
+          <span class="flex justify-center w-full">
+            <button class="w-48 h-16 mb-16 text-2xl text-white transform opacity-70 hover:opacity-100 hover:scale-105 lg:w-96 lg:text-5xl bg-gradient-to-b from-gray-500 via-black to-gray-900 rounded-xl">
+              Enviar
+            </button>
+          </span>
+        </form>
+      
+      <!--Form End***************************************************************************************************-->
+  
+  </div>
+  <!--Contact Modal End**********************************************************************************-->
+
+    <!--Hero Start***************************************************************************************************-->
+    <div id="banner" class="w-4/5 mx-auto x-auto">
+      <div class="relative mb-16 overflow-hidden bg-black h-lg">
+          <img class="object-cover w-full h-56 h-full sm:h-72 md:h-96 lg:w-full lg:h-full" src="./assets/img/RecursoUno.jpg" alt="">
+      </div>
+    </div>
+    <!--Hero End***************************************************************************************************-->
+    <!--Como reservar Start***************************************************************************************************-->
+    <span data-aos="fade-up"
+    data-aos-duration="2000"  class="flex flex-col w-4/5 mx-auto bg-black lg:h-96">
+      <p class="flex justify-center w-full py-8 text-2xl text-white lg:text-4xl">¿CÓMO RESERVAR?</p>
+      <div class="flex flex-col h-screen pb-16 text-white lg:px-16 lg:flex-row">
+
+        <div class="flex flex-col w-full my-auto text-center bg-black border-b-2 border-red-800 lg:w-1/3 lg:border-r-2 lg:border-b-0">
+          <span class="my-auto">
+            <img 
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            class="mx-auto lg:h-32 lg:w-60 " src="./assets/img/MonitorIconCrop.png" alt="">
+            <p >Selecciona la experiencia que quieres <br> vivir, el día y la hora.</p>
+          </span>
+        </div>
+  
+        <div class="flex flex-col w-full my-auto text-center bg-black border-b-2 border-red-800 lg:w-1/3 lg:border-r-2 lg:border-b-0">
+          <span class="my-auto">
+            <img 
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            class="mx-auto lg:h-32 lg:w-60 " src="./assets/img/PhoneIconCrop.png" alt="">
+            <p >Comunícate al (55) XX XX XX XX  para hacer  
+              <br> tu reservación o déjanos  tus datos en el formulario.
+            </p>
+          </span>
+        </div>
+        
+        <div class="flex flex-col w-full my-auto text-center bg-black lg:w-1/3 ">
+          <span class="my-auto">
+            <img 
+            data-aos="fade-up"
+            data-aos-duration="2000"
+            class="mx-auto lg:h-32 lg:w-60 " src="./assets/img/CalenderIconCrop.png" alt="">
+            <p >Disfruta tu experiencia el <br> día y la hora confirmada.</p>
+          </span>
+        </div>
+      </div>
+    </span>
+
+    <p class="flex justify-center py-16 text-2xl text-white lg:text-4xl">EXPERIENCIAS</p>
+    
+    <section>
+      <ul class="flex grid justify-center w-full grid-cols-1 mx-auto text-white lg:w-4/5 lg:grid-cols-2">
+        <li data-aos="fade-right"
+        data-aos-duration="2000" class="flex-col w-full px-8">
+          <!--Image***************************************************************************************************-->
+          <img class="object-cover w-full " src="./assets/img/RecursoUno.jpg" alt="">
+            <span class="flex-col w-full">
+              <!--Title***************************************************************************************************-->
+              <p class="py-4 lg:text-3xl text-md text-bold">Cata de Caco-Con un toque de Mezcal</p>
+              <!--Message***************************************************************************************************-->
+              <p class="text-sm lg:text-lg">Experiencia llevada hasta tu casa gracias a una empresa mexicana que trabaja de la mano con familias y productores
+              cocaoteros Mexicanos, bajo sistemas...</p>
+            </span>
+            <span class="flex justify-end w-full py-8 space-x-2 text-sm lg:space-x-16 lg:text-lg lg:py-16">
+              <a href="/mxm/Citi/MasInformacion">
+                <button class="px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Más Información</button>
+              </a>
+              <button class="flex flex-row px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Fechas Disponibles</button>
+            </span>
+        </li>
+
+        <li data-aos="fade-up"
+        data-aos-duration="2000" class="flex-col w-full px-8">
+          <!--Image***************************************************************************************************-->
+          <img class="object-cover w-full" src="./assets/img/RecursoDos.jpg" alt="">
+          <span class="flex-col w-full">
+            <!--Title***************************************************************************************************-->
+            <p class="py-4 lg:text-3xl text-md text-bold">Cata Vinos y quesos</p>
+            <!--Message***************************************************************************************************-->
+            <p class="text-sm lg:text-lg">En esta esperiencia cataras 3 vinos tan distintos como 
+              interesaantes: 2 Franceses (CHÂTEAU D'ORSAN CÔTES DU RHÔNE y Jean Bouchard Beaujolais-Villages) y...
+            </p>
+          </span>
+          <span class="flex justify-end w-full py-8 space-x-2 text-sm lg:space-x-16 lg:text-lg lg:py-16">
+            <a href="/mxm/Citi/MasInformacion">
+              <button class="px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Más Información</button>
+            </a>
+            <button class="px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Fechas Disponibles</button>
+          </span>
+        </li>
+
+        <li data-aos="fade-right"
+        data-aos-duration="2000" class="flex-col w-full px-8">
+          <!--Image***************************************************************************************************-->
+          <img class="object-cover w-full" src="./assets/img/RecursoTres.jpg" alt="">
+          <span class="flex-col w-full">
+            <!--Title***************************************************************************************************-->
+            <p class="py-4 lg:text-3xl text-md text-bold">Cata de Mezcales</p>
+            <!--Message***************************************************************************************************-->
+            <p class="text-sm lg:text-lg ">En esta experiencia conocerás el método de elaboración y los 
+              distintos agaves con las que se logra este destilado. La experta agavera te acompañara 
+              por este mágico...
+            </p>
+          </span>
+          <span class="flex justify-end w-full py-8 space-x-2 text-sm lg:space-x-16 lg:text-lg lg:py-16">
+            <a href="/mxm/Citi/MasInformacion">
+              <button class="px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Más Información</button>
+            </a>
+            <button class="px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Fechas Disponibles</button>
+          </span>
+        </li>
+
+        <li data-aos="fade-up"
+        data-aos-duration="2000" class="flex-col w-full px-8">
+          <!--Image***************************************************************************************************-->
+          <img class="object-cover w-full" src="./assets/img/RecursoCuatro.jpg" alt="">
+          <span class="flex-col w-full">
+            <!--Title***************************************************************************************************-->
+            <p class="py-4 lg:text-3xl text-md text-bold">Experiencia Pintura: Día de Muertos o Alebrijes</p>
+            <!--Message***************************************************************************************************-->
+            <p class="text-sm lg:text-lg">En esta experiencia viviremos de la mano de un experto en agaves y un experto en
+              tradiciones y manualidades alguna opcion de las siguintes: Dia de Muertos...</p>
+          </span>
+          <span class="flex justify-end w-full py-8 space-x-2 text-sm lg:space-x-16 lg:text-lg lg:py-16">
+            <a href="/mxm/Citi/MasInformacion">
+              <button class="px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Más Información</button>
+            </a>
+            <button class="px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Fechas Disponibles</button>
+          </span>
+        </li>
+      </ul>
+    </section>
+    <ul data-aos="fade-up"
+    data-aos-duration="2000" class="flex justify-center w-full mx-auto lg:w-4/5">
+      <li class="flex-col w-full px-8 lg:w-1/2">
+          <!--Image***************************************************************************************************-->
+          <div class="flex">
+            <div class="flex flex-col w-1/2 ">
+              <img data-aos="fade-right"
+              data-aos-duration="2000" class="z-0 object-cover w-full h-full transform cursor-pointer hover:scale-110" src="./assets/img/RecursoYoga.jpg" alt="">
+              <img data-aos="fade-right"
+              data-aos-duration="2000" class="object-cover w-full h-full transform cursor-pointer hover:scale-110"  class="w-full h-full objext-cover" src="./assets/img/RecursoMeditate.jpg" alt="">
+            </div>
+            <div class="flex flex-col w-1/2 ">
+              <img data-aos="fade-up"
+              data-aos-duration="2000" class="object-cover w-full h-full transform cursor-pointer hover:scale-110" src="./assets/img/RecursoSalsa.jpg" alt="">
+            </div>
+          </div>
+          
+            <span class="flex-col w-full text-white">
+              <!--Title***************************************************************************************************-->
+              <p class="py-4 lg:text-3xl text-bold text-md">Clases</p>
+              <!--Message***************************************************************************************************-->
+              <p class="text-sm lg:text-lg">Yoga-Meditacion-Salsa Cubana</p>
+            </span>
+          <span class="flex justify-end w-full py-8 space-x-2 text-sm lg:space-x-16 lg:text-lg lg:py-16">
+            <a href="/mxm/Citi/MasInformacion">
+              <button class="px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Más Información</button>
+            </a>
+            <button class="px-3 py-2 text-white rounded-lg hover:scale-105 opacity-70 hover:opacity-100 bg-gradient-to-b from-gray-500 via-black to-gray-800">Fechas Disponibles</button>
+          </span>
+        </li>
+    </ul>
+    
+    <!--Contact***************************************************************************************************-->
+    <p data-aos="fade-up"
+    data-aos-duration="2000" class="w-4/5 pb-8 mx-auto mt-16 text-center text-white border-b border-red-800 lg:mt-24">
+      <span class="text-2xl lg:text-3xl text-bold">CONTACTO</span>
+      <br>
+      <br>
+      <span class="text-sm lg:text-2xl">
+        Telefono: (55) XX XX XX XX
+        <br>
+        Horario de atención: 9am a 9pm
+        <br>
+        Correo: XXXX@experimenta.com.mx
+      </span>
+    </p>
+    <!--Footer***************************************************************************************************-->
+    <footer class="flex justify-center w-full py-8 text-sm text-white lg:space-x-16 lg:text-xl">
+      <a class="w-1/2 my-auto text-center text-white cursor-pointer lg:text-xl hover:opacity-100 opacity-70" href="">
+        Términos y condiciones
+      </a>
+      <a class="w-1/2 my-auto text-center text-white cursor-pointer lg:text-xl hover:opacity-100 opacity-70" href="">
+        Aviso de privacidad
+      </a>
+    </footer>
+
+<script>
+  const header = document.getElementById("nav");
+  const banner = document.getElementById("banner");
+  
+  window.addEventListener('scroll', function() { 
+    
+  setTimeout(function(){ header.classList.remove('my-16') }, 50);
+  setTimeout(function(){ banner.classList.add('pt-48') }, 50);
+  setTimeout(function(){ header.classList.add('stick') }, 50);
+  setTimeout(function(){ header.classList.add('modalBg') }, 100);
+
+});
+
+
+  const menuButton = document.getElementById("menuButton");
+  const logo = document.getElementById("logo");
+  const navOptions = document.getElementById("navOptions");
+  const btnDiv = document.getElementById("btnDiv");
+  
+  menuButton.addEventListener('click', function() { 
+  navOptions.classList.toggle("hidden")
+  logo.classList.toggle("hidden")
+  btnDiv.classList.toggle("w-1/3")
+  
+  
+});
+
+  const ayuda = document.getElementById("ayuda");
+  const ayudaBtn = document.getElementById("ayudaBtn");
+  const cerrar = document.getElementById("cerrar");
+  
+  cerrar.addEventListener("click", ()=>{
+    ayuda.classList.toggle('hidden');
+  })
+  ayudaBtn.addEventListener("click", ()=>{
+    ayuda.classList.toggle('hidden');
+});
+
+</script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "Citi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss css/styles.css -o build/styles.css",
+    "buildBootstrap": "purgecss --css ./css/bootstrap.css --content *.html --output ./build/"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.3.6",
+    "bootstrap": "^5.1.3",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
+    "tailwindcss": "^2.2.16",
+    "watch": "^1.0.2"
+  },
+  "devDependencies": {
+    "purgecss": "^4.0.3"
+  }
+}

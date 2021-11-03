@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="./build/bootstrap.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+    <link href="./build/styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="flex flex-col w-full mx-auto lg:w-2/3 xl:w-1/2 md:w-4/5 lg:flex-row">
+        <div class="relative w-full mx-auto bg-black lg:w-1/2 h-modal">
+            <p class="w-full py-8 text-lg text-center text-white lg:text-2xl lg:py-16">Folio y Clave</p>
+            <p class="w-full text-sm text-center text-white lg:px-8 lg:text-lg ">
+                Ingrese el folio y clave proporcionado
+            </p>
+            <p class="flex flex-col w-full px-4 text-sm text-center text-white lg:text-lg lg:absolute lg:bottom-20">
+                <span class="flex justify-center w-full text-sm lg:text-lg">
+                    5555-555-555
+                </span>
+                <span class="flex justify-center w-full text-sm lg:text-lg">
+                    info@ejemplo.com
+                </span>
+            </p>
+        </div>
+        <div class="relative w-full mx-auto bg-gray-400 bg-opacity-25 lg:w-1/2 h-modalTwo filter backdrop-blur-3xl backdrop-filter">
+            <!--Modal Form Start***************************************************************************************************-->
+            <div class="flex justify-end w-full">
+                <a href="#" title="Close" class="mr-4 modal-close hover:text-white">Cerrar</a>
+            </div>
+            <form class="mt-24 lg:mt-48 md:mt-32">
+                <div class="form-floating">
+                    <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+                    <label class="text-sm text-white lg:text-md" for="floatingInput">Folio</label>
+                </div>
+                <div class="form-floating ">
+                    <input type="email" class="text-white bg-transparent shadow-none form-control bootstrap-border-b" id="floatingInput" placeholder="name@example.com">
+                    <label class="text-sm text-white lg:text-md" for="floatingInput">Clave</label>
+                </div>
+            </form>
+            <!--Modal Form End***************************************************************************************************-->
+            <span class="absolute flex justify-center w-full bottom-20">
+                <button class="h-10 text-white bg-gradient-to-b from-gray-400 to-gray-800 filter backdrop-blur-3xl backdrop-filter bg-opacity-40 w-36">
+                    Siguiente
+                </button>
+            </span>
+        </div>
+    </div>
+    <script>
+        const header = document.getElementById("nav");
+        const banner = document.getElementById("banner");
+        
+        window.addEventListener('scroll', function() { 
+        setTimeout(function(){ header.classList.remove('my-16') }, 50);
+        setTimeout(function(){ banner.classList.add('pt-48') }, 50);
+        setTimeout(function(){ header.classList.add('stick') }, 50);
+        setTimeout(function(){ header.classList.add('modalBg') }, 100);
+    });
+
+        const menuButton = document.getElementById("menuButton");
+        const logo = document.getElementById("logo");
+        const navOptions = document.getElementById("navOptions");
+        const btnDiv = document.getElementById("btnDiv");
+        
+        menuButton.addEventListener('click', function() { 
+        navOptions.classList.toggle("hidden")
+        logo.classList.toggle("hidden")
+        btnDiv.classList.toggle("w-1/3")
+    });
+
+        const ayuda = document.getElementById("ayuda");
+        const ayudaBtn = document.getElementById("ayudaBtn");
+        const cerrar = document.getElementById("cerrar");
+        
+        cerrar.addEventListener("click", ()=>{
+        ayuda.classList.toggle('hidden');
+    })
+        ayudaBtn.addEventListener("click", ()=>{
+        ayuda.classList.toggle('hidden');
+    });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
